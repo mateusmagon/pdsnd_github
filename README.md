@@ -5,9 +5,10 @@ Project created in July 8, 2019
 Bikeshare
 
 ### Description
-Simple software in python that returns statistcs abut the Bikeshare's business.
+Simple software in python that returns statistcs abut the Bikeshare's business, using user inputs and preferences.
 
 ### Files used
+Files used:
 chicago.csv
 new_york_city.csv
 washington.csv
