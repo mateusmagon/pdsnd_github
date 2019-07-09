@@ -189,8 +189,7 @@ def trip_duration_stats(df):
     # display mean travel time
     print('Mean Travel Time:',df['Trip Duration'].mean()//60, ' minutes')
 
-    print("\nThis took %s seconds." % (time.time() - start_time))
-    print('-'*40)
+
 
 
 def user_stats(df, city):
@@ -243,23 +242,20 @@ def main():
         #asking user about raw_data
 
 
-        raw_data = input('\nWould you like to see a sample of the raw data? Enter yes or no.\n')
+        raw_data = input('\nWould you like to see a sample of the raw data? Enter 1 - yes or 2 - no.\n')
 
-        while raw_data.lower() == 'yes':
-            print(df[x:y])
-            raw_data = input('\nWouls you like to see five more? Enter yes or no.\n')
-            if raw_data.lower() == 'no':
+        if raw_data.lower() == 'no' or raw_data == "2":
 
-                break
-            else:
+            break
+        else:
 
-                x += 5
-                y += 5
-                continue
+            x += 5
+            y += 5
+            continue
 
 
-        restart = input('\nWould you like to restart? Enter yes or no.\n')
-        if restart.lower() != 'yes':
+        restart = input('\nWould you like to restart? Enter 1-yes or 2-no.\n')
+        if restart.lower() != 'yes' or restart == '1':
             print('Thank you very much and please approve!!')
             break
 
